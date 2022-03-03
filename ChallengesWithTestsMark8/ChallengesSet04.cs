@@ -8,23 +8,24 @@ namespace ChallengesWithTestsMark8
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            var sum = 0;
+            //var sum = 0;
 
-            foreach(var num in numbers) 
-            { 
-                if(num % 2 == 0) 
-                { 
-                    sum += num;
-                }
+            //foreach(var num in numbers) 
+            //{ 
+            //    if(num % 2 == 0) 
+            //    { 
+            //        sum += num;
+            //    }
 
-                if (num % 2  != 0) 
-                { 
-                    sum -= num;
-                }
-            }
+            //    if (num % 2  != 0) 
+            //    { 
+            //        sum -= num;
+            //    }
+            //}
 
-            return sum; 
+            //return sum; 
 
+            //LINQ answer
             return numbers.Where(x => x % 2 == 0).Sum() - numbers.Where(x => x % 2 != 0).Sum();
         }
 
